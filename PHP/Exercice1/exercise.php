@@ -3,20 +3,27 @@
 $booleanTrue;
 $booleanFalse;
 
-$int;
+$int = 2;
 
-$float;
+$float = 2.4;
 
-$integer;
+$integer = 2;
 
-$double;
+$double = 4.5;
 
-$string;
+$string = "leslie";
 
-$array;
+$array = ["leslie", 12, true];
 
-$doubleDimenssionArray;
+$doubleDimenssionArray = [
+    'test' =>[ 2, "ok"],
+    'test1' =>[ 3, "ko"]
+];
 
-$associativeArray;
+$associativeArray = [
+    'doc' =>[ 'docID', "gol", 4, true],
+    'file'=>['fileID', 'sol', 4, 'docID', true]
+];
 
-$null;
+$null = null;
+
