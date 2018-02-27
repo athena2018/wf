@@ -2,4 +2,6 @@
 $password;
 $salt;
 
+echo $password;
+
 $saltedPassword = '';
