@@ -1,0 +1,78 @@
+warning: CRLF will be replaced by LF in OOP/Exercice1/src/person.php.
+The file will have its original line endings in your working directory.
+warning: CRLF will be replaced by LF in OOP/Exercice1/src/user.php.
+The file will have its original line endings in your working directory.
+[1mdiff --git a/OOP/Exercice1/src/person.php b/OOP/Exercice1/src/person.php[m
+[1mindex f5ed890..a94c8d6 100644[m
+[1m--- a/OOP/Exercice1/src/person.php[m
+[1m+++ b/OOP/Exercice1/src/person.php[m
+[36m@@ -1,8 +1,6 @@[m
+ <?php [m
+ [m
+ [m
+[31m-[m
+[31m-[m
+ class person{[m
+     [m
+     private $id;[m
+[1mdiff --git a/OOP/Exercice1/src/user.php b/OOP/Exercice1/src/user.php[m
+[1mindex e4efe2d..91f5099 100644[m
+[1m--- a/OOP/Exercice1/src/user.php[m
+[1m+++ b/OOP/Exercice1/src/user.php[m
+[36m@@ -1,4 +1,55 @@[m
+[31m-<?php namespace Model\[m
+[32m+[m[32m<?php[m[41m [m
+[32m+[m
+[32m+[m[32muse Model\Role;[m
+[32m+[m
+[32m+[m[32mclass user{[m
+[32m+[m[32m    private $id;[m
+[32m+[m[32m    protected $roles =[];[m
+[32m+[m[32m    protected $password;[m
+[32m+[m[32m    protected $salt;[m
+[32m+[m[32m    protected $username;[m
+[32m+[m[41m    [m
+[32m+[m[32m    function getId() {[m
+[32m+[m[32m        return$id;[m
+[32m+[m[32m    }[m
+[32m+[m[32m    function getRoles(){[m
+[32m+[m[32m        return $Roles;[m
+[32m+[m[32m    }[m
+[32m+[m[32m    function getPassword(){[m
+[32m+[m[32m        return $Password;[m
+[32m+[m[32m    }[m
+[32m+[m[32m    function getSalt(){[m
+[32m+[m[32m        return$salt;[m
+[32m+[m[32m    }[m
+[32m+[m[41m    [m
+[32m+[m[32m    protected function getRoles(string $roles){[m
+[32m+[m[32m        $this->role = $roles;[m
+[32m+[m[32m        return $this;[m
+[32m+[m[32m    }[m
+[32m+[m[41m    [m
+[32m+[m[32m    protected function getPassword (string $password){[m
+[32m+[m[32m        $this->password = $password;[m
+[32m+[m[32m        return $this;[m
+[32m+[m[41m        [m
+[32m+[m[32m    }[m
+[32m+[m[32m    protected function getSalt(string $salt){[m
+[32m+[m[32m        $this->salt = $salt;[m
+[32m+[m[32m        return $this;[m
+[32m+[m[32m    }[m
+[32m+[m[32m    protected function getUsername(string $username){[m
+[32m+[m[32m        $this->username = $username;[m
+[32m+[m[32m        return $this;[m
+[32m+[m[32m    }[m
+[32m+[m[41m    [m
+[32m+[m[32m    //eraseCredentials	Erase stored salt and password data[m
+[32m+[m[32m    protected function_destruct(){[m
+[32m+[m[32m        $this->function getSalt();[m
+[32m+[m[32m        fclose($this);[m
+[32m+[m[32m    }[m
+[32m+[m[41m    [m
+[32m+[m[41m    [m
+[32m+[m[41m    [m
+[32m+[m[32m}[m
+ [m
+ [m
+ [m

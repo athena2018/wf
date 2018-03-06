@@ -1,8 +1,6 @@
 <?php 
 
 
-
-
 class person{
     
     private $id;
