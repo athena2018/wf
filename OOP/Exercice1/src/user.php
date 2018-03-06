@@ -42,8 +42,8 @@ class user{
     }
     
     //eraseCredentials	Erase stored salt and password data
-    protected function_destruct(){
-        $this->function getSalt();
+    protected function __destruct($salt){
+       $this->salt;
         fclose($this);
     }
     
