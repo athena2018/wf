@@ -1,6 +1,6 @@
 <?php 
 
-use Model\Role;
+
 
 class user{
     private $id;
@@ -22,27 +22,27 @@ class user{
         return$salt;
     }
     
-    protected function getRoles(string $roles){
+    public function getRoles(string $roles){
         $this->role = $roles;
         return $this;
     }
     
-    protected function getPassword (string $password){
+    public function getPassword (string $password){
         $this->password = $password;
         return $this;
         
     }
-    protected function getSalt(string $salt){
+    public function getSalt(string $salt){
         $this->salt = $salt;
         return $this;
     }
-    protected function getUsername(string $username){
+    public function getUsername(string $username){
         $this->username = $username;
         return $this;
     }
     
     //eraseCredentials	Erase stored salt and password data
-    protected function __destruct($salt){
+    public function __destruct($salt){
        $this->salt;
         fclose($this);
     }
