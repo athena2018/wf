@@ -1,0 +1,37 @@
+object:
+	- getter methods
+	
+result:
+	- array : 
+		[
+			'name1': value1,
+			'name2': value2,
+			'name3': value3
+		]
+		
+
+format :
+	- Json
+	- PHPNative
+
+Objective :
+
+class Metadata : Will return a configuration array to define the relation between [object getter method] and [result name]
+
+class Normalizer : Will convert the object to a resulting array
+
+class Serializer : will convert the resulting array to a given format
+
+$object = new Object();
+
+new Metadata() -> [configuration];
+
+[configuration] + $object -> new Normalizer() -> [array result];
+
+[array result] -> new Serializer() -> [Json OR PHPNative];
+
+
+
+
+
+
