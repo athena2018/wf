@@ -1,0 +1,21 @@
+{
+    "name": "etudiant/exercice4",
+    "type": "library",
+    "authors": [
+        {
+            "name": "athena2018",
+            "email": "lesgayard@gmail.com"
+        }
+    ],
+    "autoload":{
+    	"psr-4":{
+    		"":"",
+    		"Model\\": "Model/",
+ 			"Exception\\": "Exception/"	
+    	}
+    },
+	"minimum-stability": "stable",
+	"require": {
+    	"symfony/security": "^4.0"
+	}
+}
