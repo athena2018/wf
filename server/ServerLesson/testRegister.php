@@ -43,10 +43,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
                 echo 'a problem occured, contact support';
                 exit(10);
             }
-            echo "store data";
+            
+// we make a query to insert into the database the informations input
+//we have to make a secure sql query
+            $sql = "INSERT INTO user (username, password) VALUES(\"$username\", \"$password\");
+            echo 'store data';
             return;
     }else{
-        echo "fatal error";
+        echo 'fatal error';
     }
     
     
