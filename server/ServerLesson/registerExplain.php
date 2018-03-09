@@ -24,6 +24,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     //}
     
     if ($usernameSuccess && $passwordSuccess){
+        try {
+            $connection = new PDO ('mysql:host=localhost;dbname=register','root');
+        
+        } catch (PDOException $exception ){
+            http_response_code(500);
+        }
         echo "store data";
         return;
     }
