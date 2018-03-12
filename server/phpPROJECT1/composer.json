@@ -1,18 +1,15 @@
 {
-    "name": "etudiant/server",
-    "license": "mit",
-    "authors": [
-        {
-            "name": "athena2018",
-            "email": "lesgayard@gmail.com"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {},
-    	"autoload":{
-    		"psr-4":{
-    		  ""    :"src/"
-    		  
-    	  }
-    }
+	"name" : "etudiant/server",
+	"license" : "mit",
+	"authors" : [{
+			"name" : "athena2018",
+			"email" : "lesgayard@gmail.com"
+		}
+	],
+	"minimum-stability" : "dev",
+	"autoload" : {
+		"psr-4" : {
+			"" : "src/"
+		}
+	}
 }

@@ -27,7 +27,7 @@ class DBConnector{
         
  //must create the connexion and the domain space name to store the new connexion into a property
 //store the connexion as static = create a static connection
-        self::$connection = new \PDO(
+        self::$connection = new\PDO(
             $dsn,
             self::$config['dbuser'], //user key
             self::$config['dbpass'] // pass key

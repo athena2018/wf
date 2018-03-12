@@ -1,7 +1,7 @@
 
 <?php 
 // 10- create the init file and load it here
-// include_once __DIR__.'init.php';
+include_once __DIR__.'/init.php';
 
 
 
@@ -17,10 +17,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     $password=$_POST['password']?? null;
     
 // 5- validation of the data inputs for having the rigth input into the database
-    $usernameError = !(strlen($username)< 5 && is_string($username));
-    $firstnameError = !(strlen($firstname)<4 && is_string($firstname));
-    $lastnameError = !(strlen($lastname)<4 && is_string($lastname));
-    $passwordError = !(strlen($password)<5 && is_int($password)); 
+    $usernameError = !(strlen($username)< 5);
+    $firstnameError = !(strlen($firstname)<4);
+    $lastnameError = !(strlen($lastname)<4);
+    $passwordError = !(strlen($password)<5 || is_int($password)); 
     
     
     echo "Thank You for your information";
@@ -31,8 +31,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 //9- Have to create a new file for the connexion configuration, at the same time create the database with all the user inputs + the appconfig.php + the DBConnector.php        
 
 // ask the connexion to the DBConnector       
-        try {$connection=service\DBConnector::getConnection;
-        } catch (PDOException $Exception) {
+        try {$connection=service\DBConnector::getConnection();
+        } catch (\PDOException $Exception) {
             http_response_code(500);
             echo "An error occured, Please try again";
             exit(1);
@@ -89,11 +89,10 @@ else{
 	<body>
 	
 <!-- 1- step create the html form for registration -->	
-		<form action="register.php" method="post">
+		<form action="register.php" method="POST">
 		
 <!-- 4- we can display for the user the inputs in using htmlentities() for more security  -->
 			<label>Registration</label>
-			<br>
 			<input id="username" type="text" name="username" value=<?php  //echo htmlentities($username)?>>
 			<br>
 			
