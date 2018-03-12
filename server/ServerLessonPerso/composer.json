@@ -1,0 +1,17 @@
+{
+    "name": "etudiant/server-lesson",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "athena2018",
+            "email": "lesgayard@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    	"autoload":{
+    		"psr-4":{
+    			"":"src/"
+  	}
+  }
+}
